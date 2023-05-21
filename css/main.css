@@ -4,6 +4,8 @@
 
 html, body {
   font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0.5px;
+  color: var(--page-text);
 }
 
 .container {
@@ -17,10 +19,13 @@ html, body {
   --black-border: #26292d;
   --white: #fff;
   --purple: #5c62ec;
+  --grey: #fafafa;
 
+  --page-text: var(--black);
   --dark-bg: var(--black);
   --dark-border: var(--black-border);
   --header-text: var(--white);
+  --header-title: var(--grey);
   --accent: var(--purple);
 }
 
@@ -28,6 +33,7 @@ html, body {
 
 .nav {
   padding: 20px 0;
+  letter-spacing: normal;
   color: var(--header-text);
   background-color: var(--dark-bg);
   border-bottom: 1px solid var(--dark-border);
@@ -65,6 +71,11 @@ html, body {
 
 .nav-list__link {
   color: var(--header-text);
+  transition: opacity 0.2s ease-in;
+}
+
+.nav-list__link:hover {
+  opacity: 0.8;
 }
 
 .nav-list__link--active {
@@ -82,3 +93,75 @@ html, body {
   background-color: var(--accent);
 }
 
+/* header */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 695px;
+  padding: 40px 0;
+  background-image: url('./../img/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  background-color: var(--dark-bg);
+  color: var(--header-text);
+  text-align: center;
+}
+
+.header__wrapper {
+  max-width: 660px;
+  padding: 0 15px;
+}
+
+.header__title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--header-title);
+}
+
+.header__title strong {
+  font-size: 60px;
+}
+
+.header__title em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.header__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.333;
+  margin-bottom: 40px;
+}
+
+.header__text p + p {
+  margin-top: 1em;
+}
+
+.btn {
+  display: inline-block;
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  color: var(--white);
+  background-color: var(--accent);
+  transition: opacity 0.2s ease-in;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
