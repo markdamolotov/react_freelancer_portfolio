@@ -32,6 +32,7 @@ html, body {
 .section {
   padding: 70px 0;
 }
+
 .title-1 {
   margin-bottom: 60px;
   font-size: 60px;
@@ -39,6 +40,10 @@ html, body {
   line-height: 1.3;
   text-align: center;
   color: var(--accent);
+}
+
+.none {
+  display: none !important;
 }
 
 /* nav */
@@ -203,4 +208,35 @@ html, body {
   font-weight: 700;
   line-height: 1.3;
   color: var(--page-text);
+}
+
+/* footer */
+
+.footer {
+  padding: 60px 0 50px;
+  background-color: var(--dark-bg);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 27px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--header-text);
+}
+
+.copyright p + p {
+  margin-top: 0.5em;
 }
